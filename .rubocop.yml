@@ -10,3 +10,6 @@ AllCops:
     - 'app/mailers/**/*'
     - 'Gemfile'
     - 'Rakefile'
+
+Documentation:
+  Enabled: false

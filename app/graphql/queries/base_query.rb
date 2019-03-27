@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Queries
   class BaseQuery < GraphQL::Schema::Resolver
     # methods that should be inherited can go here.

@@ -1,10 +1,12 @@
-#module Types
+# frozen_string_literal: true
+
+# module Types
 #  class QueryType < Types::BaseObject
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
+# Add root-level fields here.
+# They will be entry points for queries on your schema.
 #    field :players, resolver: Queries::PlayerQueries
 #  end
-#end
+# end
 
 module Types
   class QueryType < Types::BaseObject

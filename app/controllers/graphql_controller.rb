@@ -1,3 +1,9 @@
+# frozen_string_literal: true
+
+# rubocop:disable Metrics/LineLength
+# rubocop:disable Metrics/MethodLength
+# rubocop:disable Naming/UncommunicativeMethodParamName
+
 class GraphqlController < ApplicationController
   def execute
     variables = ensure_hash(params[:variables])
@@ -9,8 +15,9 @@ class GraphqlController < ApplicationController
     }
     result = GqlApiSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result
-  rescue => e
+  rescue StandardError => e
     raise e unless Rails.env.development?
+
     handle_error_in_development e
   end
 
@@ -41,3 +48,7 @@ class GraphqlController < ApplicationController
     render json: { error: { message: e.message, backtrace: e.backtrace }, data: {} }, status: 500
   end
 end
+
+# rubocop:enable Metrics/LineLength
+# rubocop:enable Metrics/MethodLength
+# rubocop:enable Naming/UncommunicativeMethodParamName
