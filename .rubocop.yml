@@ -1,0 +1,12 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'config.ru'
+    - 'script/**/*'
+    - 'app/channels/**/*'
+    - 'app/jobs/**/*'
+    - 'app/mailers/**/*'
+    - 'Gemfile'
+    - 'Rakefile'
