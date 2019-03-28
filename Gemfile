@@ -33,6 +33,9 @@ gem 'graphql'
 gem 'rubocop', '~> 0.66.0', require: false
 
 group :development, :test do
+  gem 'rspec-rails', '~> 3.8'
+  gem 'factory_bot_rails', '~> 5.0'
+  gem 'rubocop-rspec'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
