@@ -5,7 +5,8 @@
 # rubocop:disable Naming/UncommunicativeMethodParamName
 
 class GraphqlController < ApplicationController
-  before_action :authenticate_user!, if: -> () { request.headers[:Authorization].present? }
+  UNATHENTICATED_OPERATIONS = %w(player)
+  before_action :authenticate_user!, if: -> (){ !UNATHENTICATED_OPERATIONS.include?(params[:operationName]) }
 
   def execute
     variables = ensure_hash(params[:variables])
