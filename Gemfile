@@ -30,6 +30,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # Ruby-graphql
 gem 'graphql'
+gem 'graphql-errors', '~> 0.3.0'
+
 gem 'rubocop', '~> 0.66.0', require: false
 
 group :development, :test do

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Queries
   module PlayerQueries
     class All < BaseQuery
@@ -19,8 +17,8 @@ module Queries
 
       def resolve(id:)
         Player.find(id)
-      rescue ActiveRecord::RecordNotFound
-        GraphQL::ExecutionError.new('not found')
+      rescue ActiveRecord::RecordNotFound => e
+        GraphQL::ExecutionError.new("Player not found: #{e}")
       end
     end
   end
