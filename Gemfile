@@ -32,6 +32,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'graphql'
 gem 'graphql-errors', '~> 0.3.0'
 
+gem 'devise', '~> 4.6.2'
+gem 'devise-jwt', '~> 0.5.8'
+
 gem 'rubocop', '~> 0.66.0', require: false
 
 group :development, :test do
