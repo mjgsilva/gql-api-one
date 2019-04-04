@@ -1,0 +1,6 @@
+class AddNameAndRoleToUser < ActiveRecord::Migration[5.2]
+  def change
+    add_column :users, :name, :string, null: false, default: ''
+    add_column :users, :role, :integer, null: false, default: 1
+  end
+end

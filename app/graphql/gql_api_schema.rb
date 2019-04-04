@@ -3,6 +3,9 @@
 class GqlApiSchema < GraphQL::Schema
   mutation(Types::MutationType)
   query(Types::QueryType)
+
+  use GraphQL::Batch
+  enable_preloading
 end
 
 GraphQL::Errors.configure(GqlApiSchema) do
@@ -15,6 +18,7 @@ GraphQL::Errors.configure(GqlApiSchema) do
   end
 
   rescue_from StandardError do |e|
+    puts e
     GraphQL::ExecutionError.new('Please try to execute the query for this field later')
   end
 end

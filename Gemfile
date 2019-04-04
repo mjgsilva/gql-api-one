@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Ruby-graphql
 gem 'graphql'
 gem 'graphql-errors', '~> 0.3.0'
+gem 'graphql-preload'
 
 gem 'devise', '~> 4.6.2'
 gem 'devise-jwt', '~> 0.5.8'
