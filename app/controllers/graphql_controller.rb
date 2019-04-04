@@ -8,14 +8,6 @@ class GraphqlController < ApplicationController
   UNATHENTICATED_OPERATIONS = %w(player)
   before_action :authenticate_user!, if: -> (){ !UNATHENTICATED_OPERATIONS.include?(params[:operationName]) }
 
-
-  ...
-
-
-end
-
-
-
   def execute
     variables = ensure_hash(params[:variables])
     query = params[:query]
