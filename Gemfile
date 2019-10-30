@@ -33,7 +33,7 @@ gem 'graphql'
 gem 'graphql-errors', '~> 0.3.0'
 gem 'graphql-preload'
 
-gem 'devise', '~> 4.6.2'
+gem 'devise', '~> 4.7.1'
 gem 'devise-jwt', '~> 0.5.8'
 
 gem 'rubocop', '~> 0.66.0', require: false
